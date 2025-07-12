@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"],
+textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+#gorevListesi {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.gorev {
+  background-color: #fff;
+  border-left: 5px solid gray;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.gorev.tamamlandi {
+  background-color: #d4edda;
+  border-left-color: green;
+}
+
+.gorev .butonlar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.gorev .butonlar button {
+  background-color: #eee;
+  color: black;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.gorev .butonlar button:hover {
+  background-color: #ccc;
+}
