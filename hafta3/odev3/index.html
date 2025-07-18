@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastgele Profil Kartları</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Profil Kartları</h1>
+            <p class="subtitle">Random User API ile dinamik profil kartları</p>
+        </header>
+
+        <section class="controls">
+            <div class="control-group">
+                <label for="userCount">Kullanıcı Sayısı:</label>
+                <select id="userCount" class="select-input">
+                    <option value="6">6 Kullanıcı</option>
+                    <option value="12">12 Kullanıcı</option>
+                    <option value="18">18 Kullanıcı</option>
+                    <option value="24">24 Kullanıcı</option>
+                </select>
+            </div>
+            <button id="generateBtn" class="btn btn-primary">
+                <span class="btn-text">Profilleri Getir</span>
+                <div class="btn-loader hidden"></div>
+            </button>
+        </section>
+
+        <div id="loadingState" class="loading-state hidden">
+            <div class="spinner"></div>
+            <p>Profil kartları yükleniyor...</p>
+        </div>
+
+        <section id="profileGrid" class="profile-grid hidden">
+        </section>
+
+        <section id="sliderSection" class="slider-section hidden">
+            <h2 class="section-title">Diğer Profiller</h2>
+            <div class="slider-container">
+                <button class="slider-btn slider-prev" id="sliderPrev">‹</button>
+                <div class="slider-track" id="sliderTrack">
+                </div>
+                <button class="slider-btn slider-next" id="sliderNext">›</button>
+            </div>
+            <div class="slider-dots" id="sliderDots">
+            </div>
+        </section>
+    </div>
+
+    <div id="profileModal" class="modal hidden">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
