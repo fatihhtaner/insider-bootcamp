@@ -814,7 +814,7 @@
         }
         
         if (productsToRender.length === 0) {
-          console.log("📭 Ürün listesi boş");
+          console.log("Ürün listesi boş");
           $("#productList").html(`
             <div class="no-products" style="text-align: center; padding: 20px;">
               <p style="color: #666;">🔍 Ürün bulunamadı.</p>
@@ -829,7 +829,7 @@
         $productList.empty();
 
         $.each(productsToRender, function(index, product) {
-          console.log(`📦 Ürün ${index + 1}:`, product);
+          console.log(`Ürün ${index + 1}:`, product);
           
           if (!product || !product.id) {
             console.error("❌ Geçersiz ürün:", product);
@@ -1105,7 +1105,7 @@
         $("#cartCount").text(cartCount);
 
         if (cart.length === 0) {
-          console.log("📭 Sepet boş, boş sepet gösteriliyor");
+          console.log("Sepet boş, boş sepet gösteriliyor");
           $("#cart").html(`
             <div class="empty-cart">
               <i class="fas fa-shopping-bag" style="font-size: 3em; color: #ccc; margin-bottom: 15px;"></i>
@@ -1152,7 +1152,7 @@
         
         try {
           const cartJson = JSON.stringify(cart);
-          console.log("📄 JSON string:", cartJson);
+          console.log("JSON string:", cartJson);
           localStorage.setItem("ecommerce_cart", cartJson);
         } catch (error) {
           console.error("hata:", error);
